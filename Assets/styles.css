@@ -84,19 +84,19 @@ section h2 {
   border-right: 0.15rem soild var(--con-color);
 
   letter-spacing: 0.15rem;
-  animation: typing 3.5s infinite;
-  animation-timing-function: step-end;
+  /* animation: typing 3.5s infinite;
+  animation-timing-function: step-end; */
 }
 
-@keyframes typing {
+/* @keyframes typing {
   0% {
     border-left: 0 solid var(--con-color);
   }
   100% {
     border-left: 0.15 solid var(--con-color);
     width: 100%;
-  }
-}
+  } 
+ } */
 .carrot {
   color: var(--con-color);
   animation: blinker 1s linear infinite;
