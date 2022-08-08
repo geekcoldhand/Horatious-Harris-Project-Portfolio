@@ -67,6 +67,7 @@ section h2 {
   width: 8em;
   text-align: center;
   font-size: 1.5em;
+  background-color: transparent;
 }
 
 .hello-box p {
@@ -125,7 +126,7 @@ header::before {
   filter: blur(3rem);
   position: absolute;
   z-index: 0;
-  background: var(--pop-color);
+  background: var(--text-color);
   opacity: 40%;
   padding-inline: auto;
   justify-content: center;
@@ -201,11 +202,12 @@ main {
 .project-box .project-card {
   display: flex;
   flex-direction: column;
-
-  border-top-left-radius: 3%;
-  border-bottom-left-radius: 15%;
-  border-bottom-right-radius: 15%;
-  border-top-right-radius: 15%;
+  border-top-left-radius: 23%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 23%;
+  border: 0.1rem solid var(--con-color);
+  background-color: transparent;
 }
 /* within card */
 .project-card {
@@ -325,13 +327,12 @@ footer {
 
 .about img {
   width: 22%;
+  height: 22%;
   overflow: visible;
   border-radius: 85%;
-  margin-left: 65%;
-  margin-top: 10%;
   margin-bottom: 5%;
 
-  box-shadow: 0rem 0rem 3rem var(--text-color),
+  box-shadow: 0rem 0rem 2.2rem var(--text-color),
     0rem 0rem 0rem 0.3rem var(--con-color),
     0rem 0rem 0rem 0.6rem var(--pop-color), 0rem 0rem 0rem 0.9rem var(--accent);
 }
