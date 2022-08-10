@@ -6,19 +6,20 @@
   --text-color: #eaeaea;
   --con-color: #77b599;
   --pop-color: #f9a8f9;
+  --dub-color: #b8a2c7e8;
 }
 
 /* Set basic background */
 body {
   background-color: var(--text-color);
   color: var(--text-color);
-
   font-family: "Bebas Neue", cursive;
 }
 /* Utility classes */
 .space-section {
   padding-block: 2%;
 }
+
 /* link color */
 a {
   font-family: "Kanit", sans-serif;
@@ -29,8 +30,11 @@ section h2 {
   position: relative;
   text-align: center;
   font-family: "kanit", sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--con-color);
+  width: 85%;
+  margin-inline: auto;
+  border-radius: 2.9rem;
 }
 
 /* HERO IMAGE */
@@ -45,7 +49,7 @@ section h2 {
   padding-top: -5%;
   position: relative;
   top: 0rem;
-  border-top: 0.1rem dashed var(--con-color);
+  border-top: 0.1rem dashed var(--dub-color);
   border-bottom: 0.1rem dashed var(--con-color);
 }
 .hero-text {
@@ -57,6 +61,7 @@ section h2 {
 }
 .name {
   color: var(--con-color);
+  font-weight: 700;
   filter: drop-shadow(0rem 0.3rem 0.3rem var(--con-color));
 }
 .hello-box {
@@ -66,16 +71,19 @@ section h2 {
   right: 0%;
   margin-left: auto;
   margin-right: auto;
-  width: 8em;
+  width: fit-content;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   background-color: transparent;
+  text-align: center;
 }
 .hello-box p {
-  padding-left: 6%;
-  padding-right: 6%;
+  font-weight: 800;
   width: fit-content;
   line-height: 1.4em;
+  letter-spacing: 0.8rem;
+  margin-inline: auto;
+  text-align: center;
 }
 .intro {
   font-size: 180%;
@@ -151,47 +159,68 @@ main {
 
 /* Project Section is uncer.all-projets */
 .all-projects {
-  background-color: var(--card-color);
+  background-color: var(--main-color);
 }
 /* all cards within box */
 .my-card {
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-radius: 5%;
   height: fit-content;
-  border: 0.2rem solid var(--con-color);
-  background-color: transparent;
-  padding: 1%;
+  background-color: var(--card-color);
+  padding: 2%;
   display: flex;
   justify-content: center;
+  margin-block: 1%;
+  box-shadow: 0px 0px 10px var(--dub-color);
+  color: var(--main-color);
 }
-.my-card a {
-  background-color: #77b599;
-  border: #77b599;
+
+.my-card img {
+  height: 10%;
+  object-fit: contain;
+}
+.my-card:hover {
+  box-shadow: 0px 0px 18px var(--text-color);
+}
+.my-card .card-title {
+  color: var(--sub-color);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: end;
+}
+.btn {
+  background-color: var(--dub-color);
+  color: var(--main-color);
+  border: var(--con-color);
   justify-self: center;
 }
+
 .all-projects h2 {
-  background-color: var(--card-color);
-  border-bottom: 0.3rem solid var(--card-color);
+  color: var(--dub-color);
+  box-shadow: 3px 3px 10px var(--dub-color);
+  margin-bottom: 2%;
 }
 /* the box containing all cards*/
 .project-box {
-  border-top: 0.3rem solid var(--card-color);
-  background-color: var(--card-color);
+  background-color: var(--main-color);
   padding-top: 0.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1%;
+  gap: 2%;
 }
 
 /* About Section under .about */
 .about {
-  border-top: 0.1rem dashed var(--con-color);
-  background-color: #2a2929;
+  border-top: 0.1rem dashed var(--pop-color);
+  background-color: var(--card-color);
   text-align: center;
-  line-height: 2;
+  line-height: 1.2;
+}
+
+.about h2 {
+  color: var(--con-color);
 }
 .about img {
   width: 22%;
@@ -199,14 +228,15 @@ main {
   overflow: visible;
   border-radius: 85%;
   margin: 3%;
-
   box-shadow: 0rem 0rem 2.2rem var(--text-color),
     0rem 0rem 0rem 0.3rem var(--con-color),
     0rem 0rem 0rem 0.6rem var(--pop-color), 0rem 0rem 0rem 0.9rem var(--accent);
 }
 .about-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
   align-items: center;
 }
 .about ul li {
@@ -216,14 +246,31 @@ main {
 /* Contact section under .contact */
 .contact {
   background-color: #77b599;
+  border-top: 0.1rem dashed var(--sub-color);
 }
 .contact h2 {
   color: var(--text-color);
 }
 .contact p {
   align-items: center;
+  color: var(--card-color);
+  font-size: 1.3rem;
+}
+.card-body {
+  text-align: center;
+}
+.contact-me {
+  border-radius: 3rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.contact a {
+  color: var(--card-color);
 }
 
+.contact h5 {
+  font-size: 2rem;
+}
 /* FOOTER */
 /* keep at bottom */
 footer {
@@ -231,7 +278,7 @@ footer {
   display: flex;
   margin-top: 1%;
   position: relative;
-  padding-top: 1%;
+  padding-top: 2%;
   bottom: 1rem;
   color: var(--pop-color);
   justify-content: center;
