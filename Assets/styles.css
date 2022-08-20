@@ -2,11 +2,11 @@
   --main-color: #2a2929;
   --card-color: #5f545f;
   --sub-color: #3d223d;
-  --accent: #7e3f7e;
+  --accent: #987fbb;
   --text-color: #eaeaea;
   --con-color: #77b599;
-  --pop-color: #f9a8f9;
-  --dub-color: #b8a2c7e8;
+  --pop-color: #e5bde9;
+  --dub-color: #d0afe6;
 }
 
 /* Set basic background */
@@ -17,7 +17,17 @@ body {
 }
 /* Utility classes */
 .space-section {
-  padding-block: 2%;
+  padding-block: 3%;
+}
+
+.content-card-style {
+  margin-block: 8%;
+  color: var(--dub-color);
+  box-shadow: 0px 0px 19px #7c7c7c;
+  margin-inline: auto;
+  width: 90%;
+  padding: 5%;
+  border-radius: 3rem;
 }
 
 /* link color */
@@ -32,7 +42,7 @@ section h2 {
   font-family: "kanit", sans-serif;
   font-size: 2rem;
   color: var(--con-color);
-  width: 85%;
+  width: 55%;
   margin-inline: auto;
   border-radius: 2.9rem;
 }
@@ -45,7 +55,7 @@ section h2 {
 
   object-fit: fill;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   padding-top: -5%;
   position: relative;
   top: 0rem;
@@ -195,15 +205,13 @@ main {
 }
 
 .all-projects h2 {
-  color: var(--dub-color);
-  box-shadow: 3px 3px 10px var(--dub-color);
+  color: #7c7c7c;
+  box-shadow: 3px 3px 10px var(--text-color);
   margin-bottom: 2%;
 }
 /* the box containing all cards*/
 .project-box {
   background-color: var(--main-color);
-  padding-top: 0.5rem;
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -214,11 +222,15 @@ main {
 /* About Section under .about */
 .about {
   border-top: 0.1rem dashed var(--pop-color);
-  background-color: var(--card-color);
+  background-color: var(--main-color);
   text-align: center;
   line-height: 1.2;
+  border-bottom: 0.1rem dashed var(--pop-color);
 }
-
+.about p {
+  color: rgb(226, 239, 232);
+  font-size: 1.1rem;
+}
 .about h2 {
   color: var(--con-color);
 }
@@ -245,11 +257,12 @@ main {
 
 /* Contact section under .contact */
 .contact {
-  background-color: #77b599;
+  background-image: url("../img/Nodes.svg");
   border-top: 0.1rem dashed var(--sub-color);
 }
 .contact h2 {
-  color: var(--text-color);
+  color: var(--accent);
+  box-shadow: 3px 3px 10px var(--accent);
 }
 .contact p {
   align-items: center;
@@ -263,6 +276,7 @@ main {
   border-radius: 3rem;
   margin-top: 10%;
   margin-bottom: 5%;
+  box-shadow: 4px 5px 15px #424f49d8, -3px -1px 12px #e4d9f4aa;
 }
 .contact a {
   color: var(--card-color);
@@ -276,13 +290,14 @@ main {
 footer {
   border-top: 0.1rem dashed var(--con-color);
   display: flex;
-  margin-top: 1%;
+
   position: relative;
-  padding-top: 2%;
-  bottom: 1rem;
+  padding-block: 2%;
+
   color: var(--pop-color);
   justify-content: center;
   filter: drop-shadow(0rem 0.3rem 0.3rem var(--pop-color));
+  background-color: #2a2929;
 }
 
 @media (min-width: 768px) {
