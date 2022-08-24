@@ -18,6 +18,7 @@ body {
 /* Utility classes */
 .space-section {
   padding-block: 3%;
+  padding-inline: 5%;
 }
 
 .content-card-style {
@@ -174,19 +175,25 @@ main {
 /* all cards within box */
 .my-card {
   border-radius: 5%;
+  width: 100%;
   height: fit-content;
   background-color: var(--card-color);
   padding: 2%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-block: 1%;
   box-shadow: 0px 0px 10px var(--dub-color);
   color: var(--main-color);
 }
 
 .my-card img {
-  height: 10%;
+  max-width: 70%;
   object-fit: contain;
+}
+
+.card-text {
+  line-height: 1.4rem;
 }
 .my-card:hover {
   box-shadow: 0px 0px 18px var(--text-color);
@@ -194,8 +201,8 @@ main {
 .my-card .card-title {
   color: var(--sub-color);
   font-weight: 800;
-  font-size: 1.1rem;
-  text-align: end;
+  font-size: 1.7rem;
+  padding: 1%;
 }
 .btn {
   background-color: var(--dub-color);
@@ -217,6 +224,20 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2%;
+  width: 100%;
+}
+
+.left-box {
+  flex-direction: column;
+}
+.right-box {
+  flex-direction: column-reverse;
+}
+.left-right-box-p {
+  padding: 3%;
+  margin-inline: 4%;
+  margin-block: 5%;
+  line-height: 1.9rem;
 }
 
 /* About Section under .about */
@@ -235,14 +256,18 @@ main {
   color: var(--con-color);
 }
 .about img {
-  width: 22%;
-  height: 22%;
+  width: 100%;
+
   overflow: visible;
   border-radius: 85%;
   margin: 3%;
   box-shadow: 0rem 0rem 2.2rem var(--text-color),
     0rem 0rem 0rem 0.3rem var(--con-color),
     0rem 0rem 0rem 0.6rem var(--pop-color), 0rem 0rem 0rem 0.9rem var(--accent);
+}
+.about-img-figure {
+  width: 22%;
+  height: 22%;
 }
 .about-box {
   display: flex;
@@ -254,6 +279,7 @@ main {
 .about ul li {
   list-style-type: decimal;
 }
+/* puts the card to right or left respectively */
 
 /* Contact section under .contact */
 .contact {
@@ -302,6 +328,13 @@ footer {
 
 @media (min-width: 768px) {
   .about-box {
+    flex-direction: row;
+  }
+
+  .left-box {
+    flex-direction: row;
+  }
+  .right-box {
     flex-direction: row;
   }
 }
