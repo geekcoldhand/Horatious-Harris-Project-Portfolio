@@ -90,7 +90,7 @@ section h2 {
 }
 .hello-box p {
   font-weight: 800;
-  width: fit-content;
+  height: 100%;
   line-height: 1.4em;
   letter-spacing: 0.8rem;
   margin-inline: auto;
@@ -99,11 +99,13 @@ section h2 {
 .intro {
   font-size: 180%;
   margin-bottom: 1%;
-  margin: 0 auto;
   overflow: hidden;
-  border-right: 0.15rem soild var(--con-color);
-
+  white-space: nowrap;
+  /* border-right: 0.15rem solid var(--con-color); */
+  animation: typing 2s steps(17);
+  /* , blinker 0.5s step-end infinite alternate; */
   letter-spacing: 0.15rem;
+  width: 100%;
 }
 .carrot {
   color: var(--con-color);
@@ -117,6 +119,15 @@ section h2 {
   }
   100% {
     color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 
@@ -170,16 +181,16 @@ main {
 
 /* Project Section is uncer.all-projets */
 .all-projects {
-  background-color: var(--main-color);
+  background-image: url("../img/Nodes.svg");
 }
 /* all cards within box */
 .my-card {
   border-radius: 5%;
   width: 100%;
   height: fit-content;
-  background-color: var(--card-color);
+  background-color: #73617d;
   padding: 2%;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   margin-block: 1%;
@@ -237,7 +248,7 @@ main {
   padding: 3%;
   margin-inline: 4%;
   margin-block: 5%;
-  line-height: 1.9rem;
+  line-height: 2.9rem;
 }
 
 /* About Section under .about */
@@ -288,8 +299,10 @@ main {
 }
 .contact h2 {
   color: var(--accent);
+
   box-shadow: 3px 3px 10px var(--accent);
 }
+
 .contact p {
   align-items: center;
   color: var(--card-color);
@@ -303,13 +316,15 @@ main {
   margin-top: 10%;
   margin-bottom: 5%;
   box-shadow: 4px 5px 15px #424f49d8, -3px -1px 12px #e4d9f4aa;
+  background: transparent;
 }
 .contact a {
-  color: var(--card-color);
+  color: var(--con-color);
 }
 
 .contact h5 {
   font-size: 2rem;
+  color: #77b599;
 }
 /* FOOTER */
 /* keep at bottom */
@@ -324,6 +339,37 @@ footer {
   justify-content: center;
   filter: drop-shadow(0rem 0.3rem 0.3rem var(--pop-color));
   background-color: #2a2929;
+}
+.hide-card {
+  opacity: 0;
+}
+
+.show-card-right {
+  display: flex;
+  animation: fadeInRight 1s ease-in;
+}
+.show-card-left {
+  display: flex;
+  animation: fadeInLeft 1s ease-in;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
