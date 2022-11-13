@@ -5,7 +5,7 @@ const allCards = document.querySelectorAll(".my-card");
 function showLeftRight(card) {
   let flipSwitch = 0;
   if (flipSwitch % 2 === 0) card.target.classList.add("show-card-right");
-  if (flipSwitch % 2 !== 0) card.target.classList.add("show-card-left");
+  else card.target.classList.add("show-card-left");
   console.log(flipSwitch);
   flipSwitch++;
 }
@@ -16,13 +16,16 @@ let options = {
 };
 
 const observer = new IntersectionObserver((entries) => {
+  let idx = 0;
   entries.forEach((entry) => {
     console.log("isIntersecting: ", entry.isIntersecting);
 
     if (entry.isIntersecting) {
       entry.target.classList.remove("hide-card");
+
       entry.target.classList.add("show-card-right");
     }
+    idx++;
   });
   console.log("entries Intersecting: ", entries);
 }, options);
